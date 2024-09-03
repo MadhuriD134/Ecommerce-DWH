@@ -12,7 +12,11 @@ The ask is to -
 6. Run the data pipeline and execute the SQL queries on the datawarehouse.
 7. Have some thought how to improve the usage of the datawarehouse.
 
-Design :
-For one time analysis and as per current requirement, I have taken the simplest design for dimension tables as SCD Type-1.
+Design Considerations / Assumptions:
+For one time analysis and to fulfill current requirements, the simplest design for dimension tables as SCD Type-1 will suffice in DWH. 
+No CDC ( Change Data Capture ) or BAU shceudling is done.
+
+
+Coding Artifacts :
 
 
