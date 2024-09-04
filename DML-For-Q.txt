@@ -1,0 +1,20 @@
+ 
+--3. Create a SQL query to calculate the revenue per customer. 
+SELECT customer_name, ROUND( SUM(order_total_price) ,2) as revenue_per_customer
+FROM vf-grp-gbissdbx-dev-1.customer_service.Fact_Order o
+     LEFT JOIN vf-grp-gbissdbx-dev-1.customer_service.Dim_Customer c ON o.order_customer_id = c.customer_id
+GROUP BY 1
+ORDER BY 2 DESC ;
+
+--4. Create a SQL query to calculate the value of goods stored in the different inventory locations.
+SELECT i.inventory_location, ROUND(SUM(product_customer_price),2) AS value_of_goods
+FROM vf-grp-gbissdbx-dev-1.customer_service.Fact_Inventory i
+     LEFT JOIN vf-grp-gbissdbx-dev-1.customer_service.Dim_Product p ON i.inventory_product_id = p.product_id
+GROUP BY 1
+ORDER BY 2 DESC ;
+
+--5. Create a SQL query to calculate the average order value per customer.
+--This is considered as total(revenue) / number of customers who have p;aced an order
+SELECT ROUND( SUM(order_total_price) / COUNT(distinct order_customer_id),2) as revenue_per_customer 
+FROM vf-grp-gbissdbx-dev-1.customer_service.Fact_Order o ;
+ 
