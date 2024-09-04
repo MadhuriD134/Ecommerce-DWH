@@ -13,7 +13,7 @@ The ask is to -
 7. Have some thought how to improve the usage of the datawarehouse.
 
 
-**Design Considerations / Assumptions: **
+**Design Considerations / Assumptions:**
 1.	For one time analysis and to fulfill current requirements, the simplest design for dimension tables used is SCD Type-1.
 2.	As the source data structure doesn’t provide historical data (using DATE/TIME) ; time dimension is not considered in the fact tables Order/Inventory/Order-Item.  So the design of the fact tables is simply Append-Only.
 3.	No CDC ( Change Data Capture ) or BAU scheduling is done.
@@ -23,7 +23,8 @@ b.	Google Big Query : To load Staging data
 c.	Google Big Query : To load DWH data
 d.	ETL Pipeline is written in python  
 e.	Cloud function is used to execute the pipeline
-Answers :
+
+**Answers :**
 1.	Create a data model for the datawarehouse.
   a.	Created Staging area to hold source data as is.
   b.	Created DWH Fact and Dimension tables
