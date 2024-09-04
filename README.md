@@ -13,8 +13,8 @@ The ask is to -
 7. Have some thought how to improve the usage of the datawarehouse.
 
 Design Considerations / Assumptions:
-For one time analysis and to fulfill current requirements, the simplest design for dimension tables as SCD Type-1 will suffice in DWH. 
-No CDC ( Change Data Capture ) or BAU shceudling is done.
+1. For one time analysis and to fulfill current requirements, the simplest design for dimension tables as SCD Type-1 will suffice in DWH. 
+2. No CDC ( Change Data Capture ) or BAU scheduling is done.
 
 
 Coding Artifacts :
