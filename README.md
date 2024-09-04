@@ -18,16 +18,11 @@ The ask is to -
 2.	As the source data structure doesn’t provide historical data (using DATE/TIME) ; time dimension is not considered in the fact tables Order/Inventory/Order-Item.  So the design of the fact tables is simply Append-Only.
 3.	No CDC ( Change Data Capture ) or BAU scheduling is done.
 4.	As the technology was not specified, I have used Google Cloud as :
-   
-  a.	Google Cloud Storage : To put source csv files
-  
-  b.	Google Big Query : To load Staging data
-  
-  c.	Google Big Query : To load DWH data
-  
-  d.	ETL Pipeline is written in python  
-  
-  e.	Cloud function is used to execute the pipeline
+   a.	Google Cloud Storage : To put source csv files  
+   b.	Google Big Query : To load Staging data  
+   c.	Google Big Query : To load DWH data  
+   d.	ETL Pipeline is written in python    
+   e.	Cloud function is used to execute the pipeline
   
 **Answers :**
 1.	Create a data model for the datawarehouse.
